@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'dotnet:2.1-sdk' } }
+    agent { docker { image 'maven:3.3.3' } }
     stages {
         stage('build') {
             steps {
-                sh 'dotnet --version'
+                sh 'mvn --version'
             }
         }
     }
